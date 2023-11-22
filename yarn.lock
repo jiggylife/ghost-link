@@ -233,6 +233,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/plugin-styled-components@npm:^1.5.98":
+  version: 1.5.98
+  resolution: "@swc/plugin-styled-components@npm:1.5.98"
+  checksum: 325dc50adf18aaba4ac550b6805cb2ef3ee4aa364705561b57b31b39216480fb15dcd857914b2d2d82d290eb7a97d5dd07e9cf52a6c466a9d0206e1060d65443
+  languageName: node
+  linkType: hard
+
 "@types/json5@npm:^0.0.29":
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
@@ -1340,6 +1347,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ghost-link@workspace:."
   dependencies:
+    "@swc/plugin-styled-components": ^1.5.98
     "@types/node": ^20
     "@types/react": ^18
     "@types/react-dom": ^18
@@ -1348,6 +1356,8 @@ __metadata:
     next: 14.0.3
     react: ^18
     react-dom: ^18
+    react-faq-component: ^1.3.4
+    react-icons: ^4.12.0
     styled-components: ^6.1.1
     typescript: ^5
   languageName: unknown
@@ -2306,6 +2316,26 @@ __metadata:
   peerDependencies:
     react: ^18.2.0
   checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
+  languageName: node
+  linkType: hard
+
+"react-faq-component@npm:^1.3.4":
+  version: 1.3.4
+  resolution: "react-faq-component@npm:1.3.4"
+  peerDependencies:
+    prop-types: ^15.5.4
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: b8558bdc0f7dad0df5555d901e2d7162b6a137fa040f7fb121afcb51ecdeeb80504e7382cfe46b2be81a25b7b58a7805529cac63fc9bf19bf13cec93925d4086
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:^4.12.0":
+  version: 4.12.0
+  resolution: "react-icons@npm:4.12.0"
+  peerDependencies:
+    react: "*"
+  checksum: db82a141117edcd884ade4229f0294b2ce15d82f68e0533294db07765d6dce00b129cf504338ec7081ce364fe899b296cb7752554ea08665b1d6bad811134e79
   languageName: node
   linkType: hard
 
