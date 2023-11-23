@@ -8,6 +8,7 @@ const colors = {
   grey100: "#D9D9D9",
   grey200: "#F4F4F4",
   grey300: "#FBFBFB",
+  blue100: "#0094FF",
 };
 
 export default colors;

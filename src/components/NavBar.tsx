@@ -22,6 +22,7 @@ const NavBarStyled = styled.nav`
   padding: 6px 12px;
   border: 1px solid ${colors.grey100};
   border-radius: 100px;
+  background: ${colors.white100};
 `;
 
 export default NavBar;

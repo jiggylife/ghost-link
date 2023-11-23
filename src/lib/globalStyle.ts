@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth !important;
   }
   
-  button, input {
+  button, input, textarea {
     outline: none;
     border: none;
   }

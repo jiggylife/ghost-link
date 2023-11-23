@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { useRouter } from "next/navigation";
 import styled from "styled-components";
 
 import colors from "@/lib/colors";
@@ -6,13 +7,19 @@ import colors from "@/lib/colors";
 interface Props {
   text: string;
   icon?: React.ReactNode;
+  onClick?: () => void;
 }
 
-const Button: FC<Props> = ({ text, icon, ...props }) => (
-  <ButtonStyled>
-    {text} {icon}
-  </ButtonStyled>
-);
+const Button: FC<Props> = ({ text, icon, onClick }) => {
+  const router = useRouter();
+  return (
+    <ButtonStyled
+      onClick={() => (onClick ? onClick() : router.push("/message"))}
+    >
+      {text} {icon}
+    </ButtonStyled>
+  );
+};
 
 const ButtonStyled = styled.button`
   width: auto;

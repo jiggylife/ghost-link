@@ -16,7 +16,7 @@ const Footer: FC = () => (
       <div className="right">
         <h5>Subscribe</h5>
         <div className="input-group">
-          <input type="email" name="" id="" />
+          <input type="email" name="" id="" placeholder="Enter your email" />
           <button>Subscribe</button>
         </div>
         <p>
