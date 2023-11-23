@@ -10,8 +10,10 @@ const Footer: FC = () => (
     <div className="top">
       <div className="left">
         <FooterLogo className="cursor-pointer" />
-        <p>Have Fun,</p>
-        <p>Get anonymous</p>
+        <div className="left-p">
+          <p>Have Fun,</p>
+          <p>Get anonymous</p>
+        </div>
       </div>
       <div className="right">
         <h5>Subscribe</h5>
@@ -132,6 +134,41 @@ const FooterStyled = styled.footer`
       align-items: center;
       font-size: 0.85rem;
       font-weight: 300;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 2rem 4%;
+
+    .left-p {
+      display: flex;
+      margin-bottom: 1rem;
+
+      p:last-child {
+        margin-left: 5px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      margin-right: 0;
+    }
+
+    hr {
+      margin: 1.5rem 0;
+    }
+
+    .bottom,
+    .top {
+      justify-content: center;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .bottom .left {
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      width: 70%;
     }
   }
 `;

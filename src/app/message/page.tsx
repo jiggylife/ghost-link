@@ -118,4 +118,12 @@ const MessageStyled = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 500px) {
+    display: block;
+
+    .body {
+      width: 92%;
+    }
+  }
 `;
