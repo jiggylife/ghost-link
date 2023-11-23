@@ -68,4 +68,35 @@ const FaqStyled = styled.section`
       }
     }
   }
+
+  @media screen and (max-width: 789px) {
+    width: 92%;
+    margin: 7% auto 6%;
+
+    .title {
+      font-size: 2.3rem;
+    }
+
+    .faq-row-wrapper,
+    .description {
+      width: 87%;
+    }
+
+    .faq-row-wrapper .faq-row .row-title {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    margin: 10% auto;
+
+    .description {
+      font-weight: 300;
+    }
+
+    .faq-row-wrapper,
+    .description {
+      width: 95%;
+    }
+  }
 `;

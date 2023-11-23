@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Goshlink",
+  title: "Ghostlink",
   description:
     "Welcome to Ghost Link – Your space for anonymous messages. Share thoughts, jokes, or whatever's on your mind without revealing your identity. Ghost Link lets you communicate freely, no strings attached. Join the conversation without the fuss. Start sending anonymous messages now.",
 };

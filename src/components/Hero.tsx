@@ -65,6 +65,60 @@ const HeroStyled = styled.header`
     bottom: -50px;
     width: 175px;
   }
+
+  @media screen and (max-width: 789px) {
+    width: 92dvw;
+    height: auto;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    .ghosts {
+      width: 120px;
+    }
+
+    .title {
+      font-size: 3.5rem;
+    }
+
+    .description {
+      font-size: 2rem;
+      width: 65%;
+      margin: 10px auto 2rem;
+    }
+
+    .rude {
+      right: 40px;
+      bottom: -70px;
+      width: 135px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 5rem 0;
+
+    .ghosts {
+      width: 90px;
+    }
+
+    .title {
+      font-size: 2.7rem;
+    }
+
+    .description {
+      font-size: 1.5rem;
+      width: 85%;
+    }
+
+    .rude {
+      right: 0;
+      bottom: -70px;
+      width: 110px;
+    }
+
+    .nice {
+      top: -40px;
+    }
+  }
 `;
 
 export default Hero;

@@ -40,4 +40,20 @@ const CityStyled = styled.section`
   justify-content: center;
   align-items: center;
   margin: 5% auto;
+
+  @media screen and (max-width: 789px) {
+    svg {
+      width: 60%;
+      height: auto
+    }
+   }
+
+   @media screen and (max-width: 500px) { 
+    margin: 7% auto;
+
+    svg {
+      width: 85%;
+    }
+   }
+
 `;
