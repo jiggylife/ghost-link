@@ -86,6 +86,62 @@ const TweetsSectionStyled = styled.section`
   .icon {
     margin-left: 6px;
   }
+
+  @media screen and (max-width: 789px) {
+    .grouped-guys {
+      display: block;
+    }
+
+    .main-intro {
+      width: 85%;
+      margin: 0 auto 5rem;
+    }
+
+    .tweet,
+    .texts {
+      width: 85%;
+      margin: 4rem auto;
+      text-align: center;
+    }
+
+    button {
+      margin: auto;
+    }
+
+    .tweet {
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 92dvw;
+
+    .tweet,
+    .texts,
+    .main-intro {
+      width: 100%;
+    }
+
+    .main-intro {
+      margin-bottom: 4rem;
+    }
+
+    .texts {
+      margin: 0;
+    }
+
+    .title {
+      font-size: 2.1rem;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+  }
 `;
 
 export default TweetsSection;

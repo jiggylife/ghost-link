@@ -41,6 +41,7 @@ const GlobalStyle = createGlobalStyle`
   button, input, textarea {
     outline: none;
     border: none;
+    font-size: 16.5px !important;
   }
 
   button {
