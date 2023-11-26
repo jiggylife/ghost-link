@@ -1,8 +1,10 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NextPage } from "next";
 import { FaXTwitter } from "react-icons/fa6";
-import { MdSend } from "react-icons/md";
+import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
@@ -11,11 +13,60 @@ import colors from "@/lib/colors";
 import Button from "@/components/Button";
 
 const MessagePage: NextPage = () => {
+  const [loading, setLoading] = useState(false);
+  const [text, setText] = useState("");
+  const [count, setCount] = useState("");
+
+  const getCounts = () => {
+    axios
+      .get("https://ghostlink-api.vercel.app/stat")
+      .then((res) => {
+        setCount(res.data?.data?.clicks);
+
+        // setCount()
+      })
+      .catch(() => {});
+  };
+
+  useEffect(() => {
+    getCounts();
+  }, []);
+
+  const handleSubmit = () => {
+    if (text) {
+      setLoading(true);
+      axios
+        .post("https://ghostlink-api.vercel.app/message", { message: text })
+        .then(() => {
+          setLoading(false);
+          setText("");
+          getCounts();
+          toast(
+            "Ghostly transmission complete! Your message is now in the shadows."
+          );
+        })
+        .catch((err) => {
+          setLoading(false);
+          getCounts();
+          toast.error(
+            err.response?.data?.message || "Network error, please try again"
+          );
+        });
+    } else {
+      toast("Kindly pop in your message real quick!!");
+    }
+  };
+
   return (
     <MessageStyled>
       <NavBar />
       <div className="body">
-        <div className="intro">
+        <motion.div
+          className="intro"
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, stiffness: 100, delay: 0.6 }}
+        >
           <div className="icon">
             <FaXTwitter />
           </div>
@@ -23,15 +74,34 @@ const MessagePage: NextPage = () => {
             <p className="username">@ghostlinkHQ</p>
             <p className="text">Send an anonymous message</p>
           </div>
-        </div>
-        <div className="input-container">
-          <textarea placeholder="Message here ..." draggable="false" />
-          <div className="icon">
-            <MdSend />
-          </div>
-        </div>
-        <Button text="Get Your own Anonymous Message" />
+        </motion.div>
+        <motion.div
+          className="input-container"
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, stiffness: 100, delay: 1.2 }}
+        >
+          <textarea
+            placeholder="Message here ..."
+            draggable="false"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, stiffness: 100, delay: 1.7 }}
+        >
+          <Button
+            text="Send Message"
+            isLoading={loading}
+            onClick={handleSubmit}
+          />
+        </motion.div>
+        <p className="count">{count}</p>
       </div>
+
       <Footer />
     </MessageStyled>
   );
@@ -106,16 +176,12 @@ const MessageStyled = styled.div`
         resize: none;
         color: ${colors.black300};
       }
+    }
 
-      .icon {
-        width: 30px;
-        height: 30px;
-        background: ${colors.black200};
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
-        cursor: pointer;
-      }
+    .count {
+      margin-top: 2.5rem;
+      font-weight: 500;
+      font-size: 0.89rem;
     }
   }
 
