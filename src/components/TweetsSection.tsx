@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 
 import colors from "@/lib/colors";
@@ -10,31 +11,58 @@ import Tweets from "@/svgs/Tweets";
 const TweetsSection: FC = () => (
   <TweetsSectionStyled>
     <div className="main-intro">
-      <h1 className="title">
+      <motion.h1
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, stiffness: 100 }}
+        className="title"
+      >
         WTF is <span>Ghostlink?</span>
-      </h1>
-      <p className="description">
+      </motion.h1>
+      <motion.p
+        className="description"
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1, stiffness: 100 }}
+      >
         t is a long established fact that a reader will be distracted by the
         readable content of a page when looking at its layout. The point of
         using Lorem Ipsum is that it has a more-or-
-      </p>
+      </motion.p>
     </div>
     <div className="grouped-guys">
       <div className="texts">
-        <h1 className="title">Some Nice Tweets</h1>
-        <p className="description">
+        <motion.h1
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2, stiffness: 100 }}
+          className="title"
+        >
+          Some Nice Tweets
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6, stiffness: 100 }}
+          className="description"
+        >
           t is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-
-        </p>
+        </motion.p>
         <Button
           text="Follow @ghostlinkHQ on"
           icon={<FaXTwitter className="icon" />}
         />
       </div>
-      <div className="tweet">
+      <motion.div
+        className="tweet"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.4, stiffness: 100 }}
+      >
         <Tweets />
-      </div>
+      </motion.div>
     </div>
   </TweetsSectionStyled>
 );
@@ -87,7 +115,7 @@ const TweetsSectionStyled = styled.section`
     margin-left: 6px;
   }
 
-  @media screen and (max-width: 789px) {
+  @media screen and (max-width: 830px) {
     .grouped-guys {
       display: block;
     }

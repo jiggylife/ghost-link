@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import colors from "@/lib/colors";
 
@@ -8,16 +9,38 @@ import StarGhost from "@/svgs/StarGhost";
 import NiceGhost from "@/svgs/NiceGhost";
 import RudeGhost from "@/svgs/RudeGhost";
 
-const Hero: FC = () => (
-  <HeroStyled>
-    <h1 className="title">Ghostlink</h1>
-    <p className="description">Say something anonymously</p>
-    <Button text="Send Something Anonymously" />
-    <StarGhost className="ghosts star" />
-    <NiceGhost className="ghosts nice" />
-    <RudeGhost className="ghosts rude" />
-  </HeroStyled>
-);
+const Hero: FC = () => {
+  return (
+    <HeroStyled>
+      <motion.h1
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="title"
+      >
+        Ghostlink
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.1 }}
+        className="description"
+      >
+        Say something anonymously
+      </motion.p>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, delay: 1.5 }}
+      >
+        <Button text="Send Something Anonymously" />
+      </motion.div>
+      <StarGhost className="ghosts star" />
+      <NiceGhost className="ghosts nice" />
+      <RudeGhost className="ghosts rude" />
+    </HeroStyled>
+  );
+};
 
 const HeroStyled = styled.header`
   display: flex;
