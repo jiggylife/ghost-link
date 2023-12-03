@@ -10,11 +10,12 @@ const FaqBody: FC = () => (
   <FaqStyled>
     <h1 className="title">FAQ</h1>
     <p className="description">
-      t is a long established fact that a reader will be distracted by the
-      readable content of a page when looking at its layout. The point of using
-      Lorem Ipsum is that it has a more-or-
+      Some questions we have answers to
     </p>
     <Faq data={faqData} />
+    <p className="description">
+      If you have any additional questions or concerns, feel free to reach out to our support team. We are here to assist you!
+    </p>
   </FaqStyled>
 );
 

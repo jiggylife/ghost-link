@@ -8,30 +8,45 @@ type Faq = {
 const faqData = {
   rows: [
     {
-      title: "Is Ghost Link completely anonymous?",
+      title: "How does the anonymous posting feature work?",
       content:
-        "Yes, Ghost Link ensures complete anonymity. Your identity is never revealed when sending or receiving messages.",
+        "Our website provides a platform where you can post anonymously. When you submit a post, it will be published on 𝕏 without revealing your identity. This allows you to freely express yourself while maintaining your anonymity.",
     },
     {
-      title: "How do I report inappropriate content?",
+      title: "Do I need a 𝕏 account to use this feature?",
       content:
-        "If you come across any inappropriate messages, use the reporting feature to notify our moderation team. We take user safety seriously.",
+        "No, You do not need an 𝕏 account for your anonymous posts to be published on 𝕏.",
     },
     {
-      title: "Can I customize my profile on Ghost Link?",
+      title: "How do I post anonymously?",
       content:
-        "While Ghost Link prioritizes anonymity, you can still add a personal touch by customizing your profile with unique avatars or backgrounds for your messages.",
+        "Simply visit our website and fill out the post submission form. You can write your thoughts, opinions, or any other content you wish to share anonymously. Once you submit the post, it will be automatically published on 𝕏 without linking back to your identity.",
     },
     {
-      title: "Are there any restrictions on the type of messages I can send?",
+      title: "Can my identity be revealed in any way?",
       content:
-        "Ghost Link promotes positive interactions. Any content that violates our community guidelines will be moderated. Keep it fun and respectful for everyone!",
+        "Rest assured that we prioritize your anonymity. We have implemented measures to ensure that your identity remains concealed when your post is published on 𝕏. However, please note that interacting with your post or if you provide any personally identifiable information within the content, it may compromise your anonymity.",
     },
     {
-      title: "How can I provide feedback or suggestions for Ghost Link?",
+      title: "Can I delete or edit my anonymous post?",
       content:
-        "We value your input! Feel free to provide feedback or share your suggestions through our feedback mechanism. Your ideas contribute to making Ghost Link better for everyone.",
+        "Unfortunately, once your post has been submitted and published on 𝕏, we are unable to offer any editing or deletion options. We suggest reviewing your content carefully before submitting.",
     },
+    {
+      title: "Are there any guidelines or restrictions for anonymous posts?",
+      content:
+        "While we encourage freedom of expression, we also have guidelines to maintain a respectful and safe environment. Any content that violates our terms of service, promotes hate speech, harassment, or violates 𝕏's policies will not be accepted.",
+    },
+    {
+      title: "Can I engage with other users' anonymous posts?",
+      content:
+        "Yes, you can engage with other users' anonymous posts by interacting with them on 𝕏. However, please remember to always maintain a respectful and constructive dialogue.",
+    },
+    {
+      title: "How can I stay updated on new anonymous posts?",
+      content:
+        "You can follow our 𝕏 account @ghostlinkHQ to receive notifications and updates on the latest anonymous posts. We regularly share new posts and engage with our community on 𝕏.",
+    }
   ],
 };
 

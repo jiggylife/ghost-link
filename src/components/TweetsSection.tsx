@@ -8,6 +8,10 @@ import colors from "@/lib/colors";
 import Button from "./Button";
 import Tweets from "@/svgs/Tweets";
 
+const handleTwitterButtonClick = () => {
+  window.location.href = 'https://twitter.com/ghostlinkHQ';
+};
+
 const TweetsSection: FC = () => (
   <TweetsSectionStyled>
     <div className="main-intro">
@@ -38,7 +42,7 @@ const TweetsSection: FC = () => (
           transition={{ duration: 1, delay: 0.2, stiffness: 100 }}
           className="title"
         >
-          Some Nice Tweets
+          We are on 𝕏
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 25 }}
@@ -46,11 +50,17 @@ const TweetsSection: FC = () => (
           transition={{ duration: 1, delay: 0.6, stiffness: 100 }}
           className="description"
         >
-          t is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-
+          Engage in conversations, share your thoughts, and make your voice heard among a global audience 🗣️
         </motion.p>
-        <Button
+        <motion.p
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6, stiffness: 100 }}
+          className="description"
+        >
+          Join us on Twitter now and experience a world of endless entertainment 💙
+        </motion.p>
+        <Button onClick={handleTwitterButtonClick}
           text="Follow @ghostlinkHQ on"
           icon={<FaXTwitter className="icon" />}
         />
