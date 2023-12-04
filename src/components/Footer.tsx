@@ -11,8 +11,8 @@ const Footer: FC = () => (
       <div className="left">
         <FooterLogo className="cursor-pointer" />
         <div className="left-p">
-          <p>Have Fun,</p>
-          <p>Get anonymous</p>
+          <p>Live the Ghostlife</p>
+          <p>Say something anonymously</p>
         </div>
       </div>
       <div className="right">
@@ -22,7 +22,7 @@ const Footer: FC = () => (
           <button>Subscribe</button>
         </div>
         <p>
-          By subscribing you agree to with our <a href="">Privacy Policy </a>
+          By subscribing you agree to with our <a href="">Terms of Service</a>
         </p>
       </div>
     </div>

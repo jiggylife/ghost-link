@@ -13,7 +13,7 @@ const faqData = {
         "Our website provides a platform where you can post anonymously. When you submit a post, it will be published on 𝕏 without revealing your identity. This allows you to freely express yourself while maintaining your anonymity.",
     },
     {
-      title: "Do I need a 𝕏 account to use this feature?",
+      title: "Do I need an 𝕏 account to use this feature?",
       content:
         "No, You do not need an 𝕏 account for your anonymous posts to be published on 𝕏.",
     },

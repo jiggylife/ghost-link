@@ -29,9 +29,7 @@ const TweetsSection: FC = () => (
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1, stiffness: 100 }}
       >
-        t is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-
+        Unleash your voice, share your thoughts, reach a wider audience through our platform integrated with 𝕏 #Ghostlife
       </motion.p>
     </div>
     <div className="grouped-guys">

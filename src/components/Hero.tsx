@@ -33,7 +33,7 @@ const Hero: FC = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 1.5 }}
       >
-        <Button text="Send Something Anonymously" />
+        <Button text="Say something anonymously" />
       </motion.div>
       <StarGhost className="ghosts star" />
       <NiceGhost className="ghosts nice" />
